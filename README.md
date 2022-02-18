@@ -1,2 +1,2 @@
 # fiap-android
-Sample app using Linear Layout
+Sample app using Constraint Layout
