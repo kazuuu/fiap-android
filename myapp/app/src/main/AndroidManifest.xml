@@ -10,8 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp">
         <activity
+            android:name=".CadastrarActivity"
+            android:exported="false"
+            android:label="Cadastrar"
+            android:theme="@style/NoActionBarTheme"
+            />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/NoActionBarTheme"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

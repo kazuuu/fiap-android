@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastrarActivity"
+    android:background="@drawable/fiap_bg"
+    android:fillViewport="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fiap_logo"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Cadastrar"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="36dp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:background="#30ffffff"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/et_nome_completo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome completo"
+            android:background="#30ffffff"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/et_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Senha"
+            android:background="#30ffffff"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/et_senha_confirmar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar senha"
+            android:background="#30ffffff"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sexo:"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdgGenero">
+            <RadioButton
+                android:id="@+id/rdbMasculino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Masculino"
+                android:textColor="@color/white"/>
+
+            <RadioButton
+                android:id="@+id/rdbFeminino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Femnino"
+                android:textColor="@color/white"/>
+        </RadioGroup>
+        <CheckBox
+            android:id="@+id/chkConcordoTermo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Li e concordo com o termo de uso"
+            android:textColor="@color/white"
+            />
+        <CheckBox
+            android:id="@+id/chkReceberEmails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Aceito receber emails"
+            android:textColor="@color/white"
+            />
+        <Button
+            android:id="@+id/btn_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            />
+    </LinearLayout>
+</ScrollView>
