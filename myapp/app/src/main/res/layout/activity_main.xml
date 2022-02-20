@@ -23,7 +23,6 @@
         android:layout_margin="16dp"
         android:text="Entrar"
         android:gravity="center"
-        android:textColor="@color/white"
         android:textSize="36dp"
         android:textStyle="bold"
         />
