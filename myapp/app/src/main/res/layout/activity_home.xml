@@ -15,8 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Seja bem vindo,"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="50dp"
         android:gravity="left"
+        android:textColor="@color/white"
         />
 
     <TextView
