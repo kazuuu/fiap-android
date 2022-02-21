@@ -25,6 +25,7 @@
         android:gravity="center"
         android:textSize="36dp"
         android:textStyle="bold"
+        android:textColor="@color/white"
         />
 
     <EditText
