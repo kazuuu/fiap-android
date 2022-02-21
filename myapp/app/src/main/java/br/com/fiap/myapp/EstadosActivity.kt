@@ -13,7 +13,7 @@ class EstadosActivity : AppCompatActivity() {
         // Altera o texto da Action Bar
         val actionBar: ActionBar? = getSupportActionBar()
         if (actionBar != null)
-            actionBar.setTitle("Contatos")
+            actionBar.setTitle("Estados")
 
         val fakeAPI: FakeAPI = FakeAPI()
 
