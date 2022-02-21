@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             cliqueEntrar()
         }
 
-        val tv_cadastrar = findViewById<View>(R.id.tv_cadastrar)
+        val tv_cadastrar: TextView = findViewById(R.id.tv_cadastrar)
         tv_cadastrar.setOnClickListener {
             val intent = Intent(this, CadastrarActivity::class.java)
             startActivity(intent)
@@ -30,10 +31,17 @@ class MainActivity : AppCompatActivity() {
 //            exibirMensagem("Sucesso", "Ir para tela de Cadastrar.")
         }
 
-        val tv_esqueceu = findViewById<View>(R.id.tv_esqueceu)
+        val tv_esqueceu: TextView = findViewById(R.id.tv_esqueceu)
         tv_esqueceu.setOnClickListener {
             exibirMensagem("Sucesso", "Ir para tela de Esqueci minha senha.")
         }
+
+        val et_username: EditText = findViewById(R.id.et_username)
+        et_username.setText("admin")
+
+        val et_senha: EditText = findViewById(R.id.et_senha)
+        et_senha.setText("admin")
+
     }
 
     fun exibirMensagem(titulo: String, mensagem: String) {
@@ -59,7 +67,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
         else
             Toast.makeText(this, "Usuário e senha inválido", Toast.LENGTH_LONG).show()
     }
