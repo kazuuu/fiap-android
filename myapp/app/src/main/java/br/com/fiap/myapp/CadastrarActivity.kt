@@ -18,6 +18,11 @@ class CadastrarActivity : AppCompatActivity() {
         btn_cadastrar.setOnClickListener {
             cadastrar()
         }
+
+        val btn_voltar = findViewById<View>(R.id.btn_voltar)
+        btn_voltar.setOnClickListener {
+            finish()
+        }
     }
 
     fun exibirMensagem(titulo: String, mensagem: String) {
