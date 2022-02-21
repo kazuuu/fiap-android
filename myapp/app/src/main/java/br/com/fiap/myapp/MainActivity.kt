@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         tv_cadastrar.setOnClickListener {
             val intent = Intent(this, CadastrarActivity::class.java)
             startActivity(intent)
-//            finish()
+            finish()
 
 //            exibirMensagem("Sucesso", "Ir para tela de Cadastrar.")
         }
