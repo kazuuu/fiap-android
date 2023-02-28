@@ -5,11 +5,17 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.appcompat.app.ActionBar
+import br.com.fiap.baseapp.databinding.ActivityEstadosBinding
+import br.com.fiap.baseapp.databinding.ActivityHomeBinding
 
 class EstadosActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityEstadosBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_estados)
+        binding = ActivityEstadosBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         // Altera o texto da Action Bar
         val actionBar: ActionBar? = getSupportActionBar()
@@ -20,9 +26,6 @@ class EstadosActivity : AppCompatActivity() {
 
         val adapterString = ArrayAdapter(this, android.R.layout.simple_list_item_1, fakeAPI.getEstados())
 
-        val lvEstados = findViewById<ListView>(R.id.lv_estados)
-        lvEstados.adapter = adapterString
-
+        binding.lvEstados.adapter = adapterString
     }
-
 }

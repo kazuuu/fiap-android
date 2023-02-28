@@ -4,11 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
 import androidx.appcompat.app.ActionBar
+import br.com.fiap.baseapp.databinding.ActivityContatosBinding
+import br.com.fiap.baseapp.databinding.ActivityEstadosBinding
 
 class ContatosActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityContatosBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_contatos)
+        binding = ActivityContatosBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         // Altera o texto da Action Bar
         val actionBar: ActionBar? = getSupportActionBar()
@@ -19,7 +25,6 @@ class ContatosActivity : AppCompatActivity() {
         val contatos: ArrayList<Contato> = fakeAPI.getContatos()
         val adapter = ContatosAdapter(this, contatos)
 
-        val lvContatos = findViewById<ListView>(R.id.lv_contatos)
-        lvContatos.adapter = adapter
+        binding.lvContatos.adapter = adapter
     }
 }

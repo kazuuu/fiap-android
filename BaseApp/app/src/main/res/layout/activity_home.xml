@@ -18,7 +18,7 @@
         >
 
         <TextView
-            android:id="@+id/tv_welcome"
+            android:id="@+id/tvWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="left"
@@ -28,7 +28,7 @@
             />
 
         <TextView
-            android:id="@+id/tv_username"
+            android:id="@+id/tvUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -43,7 +43,7 @@
 
 
     <Button
-        android:id="@+id/btn_estados"
+        android:id="@+id/btnEstados"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -51,14 +51,14 @@
         android:text="Listar Estados" />
 
     <Button
-        android:id="@+id/btn_contatos"
+        android:id="@+id/btnContatos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="Listar Contatos" />
 
     <Button
-        android:id="@+id/btn_sair"
+        android:id="@+id/btnSair"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"

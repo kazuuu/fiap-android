@@ -3,34 +3,31 @@ package br.com.fiap.baseapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
+import br.com.fiap.baseapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+    }
 
-        val btnEntrar = findViewById<Button>(R.id.btn_entrar)
-        btnEntrar.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
+    fun irEntrar(view: View) {
+        val intent = Intent(this, HomeActivity::class.java)
 
-            val etUsername = findViewById<EditText>(R.id.et_username)
-            intent.putExtra("username", etUsername.text.toString())
+        intent.putExtra("username", binding.etUsername.text.toString())
 
-            startActivity(intent)
-            finish()
-        }
-
-        var msg = "Username: Marcello\n"
-        msg = msg + "Nome Completo: Marcello Kazuo\n"
-        msg = msg + "Senha: abc\n"
-        msg = msg + "Confirmar Senha: abc\n"
-        msg = msg + "Genero: Masculino\n"
-
-        exibirMensagem("Sucesso", msg)
+        startActivity(intent)
+        finish()
     }
 
     fun exibirMensagem(titulo: String, mensagem: String) {
@@ -43,4 +40,13 @@ class MainActivity : AppCompatActivity() {
         builder.create().show()
 
     }
+
+    fun irCadastrar(view: View) {
+        exibirMensagem("Ir para CadastrarActivity", "We are under construction")
+    }
+
+    fun irEsqueci(view: View) {
+        exibirMensagem("Ir para EsqueceuActivity", "We are under construction")
+    }
+
 }

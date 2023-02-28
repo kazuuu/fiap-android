@@ -7,11 +7,17 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
+import br.com.fiap.baseapp.databinding.ActivityHomeBinding
+import br.com.fiap.baseapp.databinding.ActivityMainBinding
 
 class HomeActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityHomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         // Altera o texto da Action Bar
         val actionBar: ActionBar? = getSupportActionBar()
@@ -22,27 +28,13 @@ class HomeActivity : AppCompatActivity() {
         val username = intent.getStringExtra("username")
 
         // Coloca o username no TextView da HomeActivity
-        val tv_username = findViewById<TextView>(R.id.tv_username)
-        tv_username.text = username;
+        binding.tvUsername.text = username;
+    }
 
-        val btnSair = findViewById<Button>(R.id.btn_sair)
-        btnSair.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        // Configura o evento OnClick do botao Listar Estados para executar a função irEstados()
-        val btnEstados = findViewById<Button>(R.id.btn_estados)
-        btnEstados.setOnClickListener {
-            irEstados()
-        }
-
-        // Configura o evento OnClick do botao Listar Estados para executar a função irEstados()
-        val btnContato = findViewById<Button>(R.id.btn_contatos)
-        btnContato.setOnClickListener {
-            irContatos()
-        }
+    fun sair() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     fun irContatos() {
