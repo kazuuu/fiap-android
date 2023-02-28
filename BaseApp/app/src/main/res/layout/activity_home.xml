@@ -48,20 +48,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:padding="16dp"
-        android:text="Listar Estados" />
+        android:text="Listar Estados"
+        android:onClick="irEstados"/>
 
     <Button
         android:id="@+id/btnContatos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="Listar Contatos" />
+        android:text="Listar Contatos"
+        android:onClick="irContatos"/>
 
     <Button
         android:id="@+id/btnSair"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="Sair" />
+        android:text="Sair"
+        android:onClick="sair"/>
 
 </LinearLayout>
